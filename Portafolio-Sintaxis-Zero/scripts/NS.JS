@@ -1,24 +1,28 @@
 let numeroSecreto = Math.floor(Math.random() * 10) + 1;
 let intentos = 0;
-let maxIntentos = 3; // modo desafío
+let maxIntentos = 3; 
 
 
 function verificarNumero() {
 
     let campo = document.getElementById("numeroUsuario");
-    let numero = campo.value;
+let numero = campo.value;
 
-    if (numero === "") {
-        alert("Debe ingresar un número");
-        return;
-    }
+
+if (numero === "") {
+    alert("Debe ingresar un número");
+    return;
+}
+
+
+numero = Number(numero);
+
 
 if (numero < 1 || numero > 10) {
     document.getElementById("mensaje").innerHTML =
     "⚠️ Solo puedes usar números del 1 al 10";
     return;
 }
-
     
     if (numero < 1) {
         numero = 1;
