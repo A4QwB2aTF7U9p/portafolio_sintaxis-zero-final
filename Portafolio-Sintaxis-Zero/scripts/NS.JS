@@ -13,9 +13,13 @@ function verificarNumero() {
         return;
     }
 
-    numero = Number(numero);
+if (numero < 1 || numero > 10) {
+    document.getElementById("mensaje").innerHTML =
+    "⚠️ Solo puedes usar números del 1 al 10";
+    return;
+}
 
-    // 🔹 Limitar entre 1 y 10 automáticamente
+    
     if (numero < 1) {
         numero = 1;
     } else if (numero > 10) {
